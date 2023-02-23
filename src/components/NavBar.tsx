@@ -19,6 +19,7 @@ function NavBar() {
             <a
               className="hover:bg-gray-500 transition-all duration-500"
               href={item.link}
+              key={item.text}
             >
               {item.text}
             </a>
