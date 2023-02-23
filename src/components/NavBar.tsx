@@ -11,13 +11,15 @@ const menuItems = [
 
 function NavBar() {
   return (
-    <div className="fixed top-0 left-0 w-full h-10 px-10">
+    <div className="fixed top-0 left-0 w-full py-3 px-10 bg-gradient-to-br from-blue-200 via-blue-400 to-blue-500">
       <div className="flex flex-row justify-between items-center h-full">
-        <div id="logo">Timothy Huynh</div>
+        <div id="logo">
+          <a href="#hero">Timothy Huynh</a>
+        </div>
         <div id="menuItems" className="flex flex-row gap-3">
           {menuItems.map((item) => (
             <a
-              className="hover:bg-gray-500 transition-all duration-500"
+              className="bg-blue-600 hover:bg-gray-500 hover:text-slate-200 transition-all duration-500 py-2 px-3 rounded-md shadow-lg font-bold"
               href={item.link}
               key={item.text}
             >

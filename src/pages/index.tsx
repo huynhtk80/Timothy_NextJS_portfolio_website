@@ -4,10 +4,32 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
+import coverImg from "../assets/TH_cover.jpg";
+import { useState, useRef, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cursorState, setCursorState] = useState(true);
+  const text = "Full Stack Developer!";
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeoutId = setTimeout(() => {
+        setCurrentIndex(currentIndex + 1);
+      }, 100);
+      return () => clearTimeout(timeoutId);
+    } else {
+      const intervalId = setInterval(() => {
+        setCursorState((prevState) => !prevState);
+      }, 500);
+      return () => clearInterval(intervalId);
+    }
+  }, [currentIndex]);
+
+  const visibleText = text.substring(0, currentIndex);
   return (
     <>
       <Head>
@@ -31,15 +53,40 @@ export default function Home() {
       <main className="">
         <section
           id="hero"
-          className="flex flex-col justify-center items-center h-screen"
+          className="flex flex-col justify-center items-center h-screen "
         >
-          <h2 className=" text-red-600 font-extrabold">Timothy Huynh</h2>
-          <p>Programing is awesome!!</p>
+          <div
+            id="hero_image_overlay"
+            className="absolute top-0 left-0 right-0 bottom-0 -z-10"
+          >
+            <img
+              src={coverImg.src}
+              alt="mountain cover image"
+              className=" object-cover min-h-full"
+            ></img>
+          </div>
+          <div
+            id="hero_image_overlay"
+            className="absolute top-0 left-0 right-0 bottom-0 -z-10 bg-slate-700 opacity-70"
+          ></div>
+          <h2 className=" text-7xl bg-gradient-to-br from-blue-200 via-blue-400 to-blue-500 hover:scale-105 transition-color duration-500 text-transparent bg-clip-text font-extrabold p-5 mb-2">
+            Timothy Huynh
+          </h2>
+
+          <p className="text-2xl font-bold text-blue-500">
+            {visibleText}
+            <span
+              ref={cursorRef}
+              className={`${cursorState ? "opacity-100" : "opacity-0"} `}
+            >
+              |
+            </span>
+          </p>
           <Link href="/contact">Contact Me</Link>
         </section>
         <section
           id="aboutMe"
-          className="flex justify-center items-center h-screen"
+          className="flex justify-center items-center h-screen bg-blue-500"
         >
           about me section
         </section>
@@ -51,13 +98,22 @@ export default function Home() {
         </section>
         <section
           id="work"
-          className="flex justify-center items-center h-screen"
+          className="flex justify-center items-center h-screen bg-blue-500"
         >
           Work History
         </section>
-        <section id="fun" className="flex justify-center items-center h-screen">
+        <section
+          id="fun"
+          className="flex justify-center items-center h-screen "
+        >
           fun
         </section>
+        <footer
+          id="footer"
+          className="flex justify-center items-center h-36 bg-blue-400"
+        >
+          <p>huynh.tk80@gmail.com | © 2023 All rights reserved </p>
+        </footer>
       </main>
     </>
   );
