@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,10 +27,37 @@ export default function Home() {
           content="https://ia.media-imdb.com/images/rock.jpg"
         /> */}
       </Head>
-      <main className={styles.main}>
-        <h2>Timothy Huynh</h2>
-        <p>Programing is awesome!!</p>
-        <Link href="/contact">Contact Me</Link>
+      <NavBar />
+      <main className="">
+        <section
+          id="hero"
+          className="flex flex-col justify-center items-center h-screen"
+        >
+          <h2 className=" text-red-600 font-extrabold">Timothy Huynh</h2>
+          <p>Programing is awesome!!</p>
+          <Link href="/contact">Contact Me</Link>
+        </section>
+        <section
+          id="aboutMe"
+          className="flex justify-center items-center h-screen"
+        >
+          about me section
+        </section>
+        <section
+          id="projects"
+          className="flex justify-center items-center h-screen"
+        >
+          Projects
+        </section>
+        <section
+          id="work"
+          className="flex justify-center items-center h-screen"
+        >
+          Work History
+        </section>
+        <section id="fun" className="flex justify-center items-center h-screen">
+          fun
+        </section>
       </main>
     </>
   );
