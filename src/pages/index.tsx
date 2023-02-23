@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
-import coverImg from "../../public/TH_cover.jpg";
+import coverImg from "../../public/TH_Cover.jpg";
 import { useState, useRef, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
