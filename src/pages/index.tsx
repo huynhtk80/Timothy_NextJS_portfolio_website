@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
-import coverImg from "next/TH_cover.jpg";
+// import coverImg from "next/TH_cover.jpg";
 import { useState, useRef, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -60,7 +60,7 @@ export default function Home() {
             className="absolute top-0 left-0 right-0 bottom-0 -z-10"
           >
             <img
-              src={coverImg.src}
+              src="/TH_cover.jpg"
               alt="mountain cover image"
               className=" object-cover min-h-full"
             ></img>
