@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from "react";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Footer from "@/components/footer";
+import Projects from "@/components/Projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,13 +37,8 @@ export default function Home() {
       <main className="">
         <Hero />
         <AboutMe />
+        <Projects />
 
-        <section
-          id="projects"
-          className="flex justify-center items-center h-screen"
-        >
-          Projects
-        </section>
         <section
           id="work"
           className="flex justify-center items-center h-screen bg-blue-500"
