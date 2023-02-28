@@ -27,7 +27,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col justify-center items-center h-screen "
+      className="relative flex flex-col justify-center items-center h-screen "
     >
       <div
         id="hero_image_overlay"

@@ -34,7 +34,7 @@ function NavBar() {
   return (
     <div
       className={
-        "fixed top-0 left-0 w-full py-3 px-10 " +
+        "fixed top-0 left-0 w-full py-3 px-10 z-50 " +
         (navbar ? "bg-black opacity-70" : "")
       }
     >
