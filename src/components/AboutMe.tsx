@@ -32,9 +32,9 @@ function AboutMe() {
         </div>
       </div>
       <div className="flex flex-row">
-        {Object.keys(techIcons).map((key, index) => (
+        {Object.entries(techIcons).map(([key, value], index) => (
           <Image
-            src={techIcons[key]}
+            src={value}
             alt="tim profile image"
             className=" rounded-full"
             key={key}
