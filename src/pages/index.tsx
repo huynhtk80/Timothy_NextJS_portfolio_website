@@ -8,8 +8,9 @@ import NavBar from "@/components/NavBar";
 import { useState, useRef, useEffect } from "react";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
+import Work from "@/components/Work";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,23 +35,18 @@ export default function Home() {
         /> */}
       </Head>
       <NavBar />
-      <main className="">
+      <main className="bg-gray-800 text-slate-300">
         <Hero />
         <AboutMe />
         <Projects />
+        <Work />
 
-        <section
-          id="work"
-          className="flex justify-center items-center h-screen bg-blue-500"
-        >
-          Work History
-        </section>
-        <section
+        {/* <section
           id="fun"
           className="flex justify-center items-center h-screen "
         >
           fun
-        </section>
+        </section> */}
         <Footer />
       </main>
     </>

@@ -51,14 +51,14 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col justify-center items-center h-fit py-20"
+      className="flex flex-col justify-center items-center h-fit py-20 bg-slate-700"
     >
       <h1 className="text-2xl font-bold text-center mb-5">Recent Projects</h1>
       <div className="flex justify-center gap-5 flex-wrap">
         {projects.map((proj) => (
           <div
             key={proj.project}
-            className=" max-w-sm shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-all duration-500 flex flex-col justify-between"
+            className=" max-w-sm shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-all duration-500 flex flex-col justify-between bg-slate-200 text-slate-800"
           >
             {/* cardcontent */}
             <div>

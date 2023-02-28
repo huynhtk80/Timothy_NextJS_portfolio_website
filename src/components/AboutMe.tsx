@@ -7,7 +7,7 @@ function AboutMe() {
   return (
     <section
       id="aboutMe"
-      className="flex flex-col justify-center items-center min-h-screen bg-blue-500 p-3"
+      className="flex flex-col justify-center items-center min-h-screen bg-gray-800 p-3 text-slate-300"
     >
       <div className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="max-w-xs md:max-w-md">

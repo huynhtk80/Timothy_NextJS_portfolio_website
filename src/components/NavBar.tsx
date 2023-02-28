@@ -6,7 +6,7 @@ const menuItems = [
   { link: "#aboutMe", text: "About Me" },
   { link: "#projects", text: "Projects" },
   { link: "#work", text: "Work" },
-  { link: "#fun", text: "Fun" },
+  // { link: "#fun", text: "Fun" },
 ];
 
 function NavBar() {

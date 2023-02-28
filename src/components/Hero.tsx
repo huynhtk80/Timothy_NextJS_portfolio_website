@@ -27,11 +27,11 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-center items-center h-screen "
+      className="relative flex flex-col justify-center items-center h-screen"
     >
       <div
         id="hero_image_overlay"
-        className="absolute top-0 left-0 right-0 bottom-0 -z-10"
+        className="absolute top-0 left-0 right-0 bottom-0 z-[1]"
       >
         <Image
           src={coverImg}
@@ -41,18 +41,18 @@ function Hero() {
       </div>
       <div
         id="hero_image_overlay"
-        className="absolute top-0 left-0 right-0 bottom-0 -z-10 bg-slate-700 opacity-70"
+        className="absolute top-0 left-0 right-0 bottom-0 bg-slate-700 opacity-70 z-[2]"
       ></div>
-      <h2 className=" text-7xl bg-gradient-to-br text-center from-blue-200 via-blue-400 to-blue-500 hover:scale-105 transition-color duration-500 text-transparent bg-clip-text font-extrabold p-5 ">
+      <h2 className=" text-7xl bg-gradient-to-br text-center from-blue-200 via-blue-400 to-blue-500 hover:scale-105 transition-color duration-500 text-transparent bg-clip-text font-extrabold p-5 z-[3]">
         Timothy Huynh
       </h2>
-      <p className="text-3xl font-bold text-blue-500 mb-5 text-center">
+      <p className="text-3xl font-bold text-blue-500 mb-5 text-center z-[3]">
         Full Stack Developer
       </p>
-      <p className="text-lg md:text-2xl  text-blue-200 text-center px-2">
+      <p className="text-lg md:text-2xl  text-blue-200 text-center px-2 z-[3]">
         “A jack of all trades is a master of none,
       </p>
-      <p className="text-lg md:text-2xl  text-blue-200 mb-5 text-center px-2">
+      <p className="text-lg md:text-2xl  text-blue-200 mb-5 text-center px-2 z-[3]">
         {visibleText}
         <span
           ref={cursorRef}
@@ -64,7 +64,7 @@ function Hero() {
       {/* <Link href="/contact" className="bg-slate-400 px-2 py-2 rounded-lg">
             Contact Me
           </Link> */}
-      <a href="#aboutMe">
+      <a href="#aboutMe" className="z-[3]">
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
