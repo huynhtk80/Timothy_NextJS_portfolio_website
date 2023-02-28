@@ -20,14 +20,13 @@ function AboutMe() {
         <div>
           <div className="font-bold text-xl">About Me</div>
           <div className="text-lg max-w-lg">
-            Timothy has spent over 13 years working with people and evaluating
-            how they interact with technological innovation. With a degree in
-            Kinesiology and a diploma in Mechanical Engineering Technology,
-            Timothy brings a unique perspective to every project. He enjoys
-            helping others and bringing their visions to life. His goal after
-            the project is to join fast moving company as a full stack developer
-            with the opportunity to grow into a technical lead or project
-            manager.
+            I have spent over 13 years evaluating how people interact with their
+            environment and technological innovation. With a degree in
+            Kinesiology and a diploma in Mechanical Engineering Technology, I
+            bring a unique perspective to every project. I enjoy helping others
+            bring their visions to life and value good work. I would like to
+            join a fast-moving company as a full-stack developer where I can
+            make an impact and have the ability to grow.
           </div>
         </div>
       </div>
