@@ -7,10 +7,10 @@ function AboutMe() {
   return (
     <section
       id="aboutMe"
-      className="flex flex-col justify-center items-center h-screen bg-blue-500 gap-10"
+      className="flex flex-col justify-center items-center min-h-screen bg-blue-500 p-3"
     >
-      <div className="flex flex-col md:flex-row justify-center items-center">
-        <div className="max-w-md">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+        <div className="max-w-xs md:max-w-md">
           <Image
             src={profileImg}
             alt="tim profile image"
@@ -31,15 +31,23 @@ function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row">
-        {Object.entries(techIcons).map(([key, value], index) => (
-          <Image
-            src={value}
-            alt="tim profile image"
-            className=" rounded-full"
-            key={key}
-          ></Image>
-        ))}
+      <div>
+        <h2 className="text-xl font-bold text-center mt-10">Tech Stack</h2>
+        <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10 justify-center items-center gap-3">
+          {Object.entries(techIcons).map(([key, value], index) => (
+            <div className="flex flex-col justify-center items-center text-xs hover:scale-105">
+              <Image
+                src={value}
+                alt="tim profile image"
+                className="h-20 w-20  "
+                key={key}
+              ></Image>
+              <p className=" mt-1 bg-slate-600 text-white py-0.5 px-1 rounded-md">
+                {key}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

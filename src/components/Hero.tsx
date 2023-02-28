@@ -49,10 +49,10 @@ function Hero() {
       <p className="text-3xl font-bold text-blue-500 mb-5 text-center">
         Full Stack Developer
       </p>
-      <p className="text-2xl  text-blue-200 text-center">
+      <p className="text-lg md:text-2xl  text-blue-200 text-center px-2">
         “A jack of all trades is a master of none,
       </p>
-      <p className="text-2xl  text-blue-200 mb-5 text-center">
+      <p className="text-lg md:text-2xl  text-blue-200 mb-5 text-center px-2">
         {visibleText}
         <span
           ref={cursorRef}
