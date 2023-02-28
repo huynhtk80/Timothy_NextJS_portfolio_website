@@ -10,7 +10,7 @@ import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
-import Work from "@/components/Work";
+import Journey from "@/components/Journey";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +39,7 @@ export default function Home() {
         <Hero />
         <AboutMe />
         <Projects />
-        <Work />
+        <Journey />
 
         {/* <section
           id="fun"
