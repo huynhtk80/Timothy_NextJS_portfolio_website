@@ -37,6 +37,7 @@ function AboutMe() {
             src={techIcons[key]}
             alt="tim profile image"
             className=" rounded-full"
+            key={key}
           ></Image>
         ))}
       </div>
