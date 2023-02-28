@@ -35,12 +35,14 @@ function AboutMe() {
         <h2 className="text-xl font-bold text-center mt-10">Tech Stack</h2>
         <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10 justify-center items-center gap-3">
           {Object.entries(techIcons).map(([key, value], index) => (
-            <div className="flex flex-col justify-center items-center text-xs hover:scale-105">
+            <div
+              key={key}
+              className="flex flex-col justify-center items-center text-xs hover:scale-105"
+            >
               <Image
                 src={value}
                 alt="tim profile image"
                 className="h-20 w-20  "
-                key={key}
               ></Image>
               <p className=" mt-1 bg-slate-600 text-white py-0.5 px-1 rounded-md">
                 {key}
