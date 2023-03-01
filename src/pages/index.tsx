@@ -8,9 +8,10 @@ import NavBar from "@/components/NavBar";
 import { useState, useRef, useEffect } from "react";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
-import Footer from "@/components/Footer";
+
 import Projects from "@/components/Projects";
 import Journey from "@/components/Journey";
+import Footer from "@/components/FooterSimple";
 
 const inter = Inter({ subsets: ["latin"] });
 
